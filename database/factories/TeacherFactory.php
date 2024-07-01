@@ -22,8 +22,8 @@ class TeacherFactory extends Factory
                 'phone' => fake()->phoneNumber(),
                 'email' => fake()->unique()->safeEmail(),
                 'facebook' => fake()->url(),
-                'Twitter' => fake()->url(),
-                'Instagram' => fake()->url(),
+                'twitter' => fake()->url(),
+                'instagram' => fake()->url(),
                 'image' => fake()->imageUrl(640, 480),
             ];
     }

@@ -22,7 +22,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $classses = Course::get();
+        $courses = Course::get();
         return view('admin/courses', compact('courses'));
     }
 

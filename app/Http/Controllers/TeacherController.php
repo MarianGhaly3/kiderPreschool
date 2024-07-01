@@ -95,8 +95,8 @@ class TeacherController extends Controller
             'phone' => 'required|min:11',
             'email' => 'required|email:rfc',
             'facebook' => 'required|url',
-            'Twitter' => 'required|url',
-            'Instagram' => 'required|url',
+            'twitter' => 'required|url',
+            'instagram' => 'required|url',
             'image' => 'sometimes|file:image', //nullable
         ], $messages);
         

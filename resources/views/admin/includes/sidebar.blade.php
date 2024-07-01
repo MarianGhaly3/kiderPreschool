@@ -62,7 +62,7 @@
                 <li class="nav-item">
                     <a data-bs-toggle="collapse" href="#classes" class="collapsed" aria-expanded="false">
                         <i class="fa fa-book"></i>
-                        <p>Classes</p>
+                        <p>Courses</p>
                         <span class="caret"></span>
                     </a>
                     <div class="collapse" id="classes">
@@ -73,8 +73,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('addClass') }}" >
-                                    <span class="sub-item">Add Class</span>
+                                <a href="{{ route('addCourse') }}" >
+                                    <span class="sub-item">Add Course</span>
                                 </a>
                             </li>
                         </ul>

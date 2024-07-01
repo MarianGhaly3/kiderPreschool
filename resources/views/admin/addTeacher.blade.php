@@ -68,8 +68,8 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="file" class="form-control" id="img" name="img" placeholder="Teacher Image">
-                                        <label for="Facebook">Teacher Image</label>
+                                        <input type="file" class="form-control" id="img" name="image" placeholder="Teacher Image">
+                                        <label for="image">Teacher Image</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
