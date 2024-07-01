@@ -7,19 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
-class Teacher extends Model
+class Classs extends Model
 {
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'subject',
         'teacherName',
-        'phone',
-        'email',
-        'facebook',
-        'Twitter',
-        'Instagram',
-        'image',
+        'Price',
+        'Age',
+        'Time',
+        'Capacity',
     ];
-
 }

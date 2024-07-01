@@ -68,12 +68,12 @@
                     <div class="collapse" id="classes">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a data-bs-toggle="collapse" href="#subnav1">
+                                <a href="{{ route('classes') }}">
                                     <span class="sub-item">Classes</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{{ route('addClass') }}" >
                                     <span class="sub-item">Add Class</span>
                                 </a>
                             </li>

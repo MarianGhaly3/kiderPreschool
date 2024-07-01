@@ -4,14 +4,14 @@
 
 <div class="container">
   <div class="page-inner">
-    <h2> Teachers </h2><br>
+    <h2> Classes </h2><br>
 
     <div class="row">
       <div class="col-md-12">
         <div class="card card-round">
           <div class="card-header">
             <div class="card-head-row card-tools-still-right">
-              <h4 class="card-title">Teachers </h4>
+              <h4 class="card-title"> Classes </h4>
               <div class="card-tools">
                 <button class="btn btn-icon btn-link btn-primary btn-xs">
                   <span class="fa fa-angle-down"></span> </button>
@@ -41,22 +41,22 @@
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($classes as $class)
+                  @foreach ($classses as $classs)
                   <tr>
-                      <td>{{ $class->subject }}</td>
-                      <td>{{ $class->teacherName }}</td>
-                      <td>{{ $class->price }}</td>
-                      <td>{{ $class->age }}</td>
-                      <td>{{ $class->time }}</td>
-                      <td>{{ $class->capacity }}</td>
+                      <td>{{ $classs->subject }}</td>
+                      <td>{{ $classs->teacherName }}</td>
+                      <td>{{ $classs->price }}</td>
+                      <td>{{ $classs->age }}</td>
+                      <td>{{ $classs->time }}</td>
+                      <td>{{ $classs->capacity }}</td>
 
-                      <td><a href="{{ route('editTeacher', $teacher->id) }}">Edit</a></td>
-                      <td><a href="{{ route('showTeacher', $teacher->id) }}">Show</a></td>
+                      <td><a href="{{ route('editClass', $classs->id) }}">Edit</a></td>
+                      <td><a href="{{ route('showClass', $classs->id) }}">Show</a></td>
                       <td>
-                        <form action="{{ route('deleteTeacher') }}" method="POST">
+                        <form action="{{ route('deleteClass') }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <input type="hidden" value="{{$teacher->id}}" name="id">
+                        <input type="hidden" value="{{$classs->id}}" name="id">
                         <input type="submit" value="Delete"
                           onclick="return confirm('Are you sure you want to delete record ?')">
                         </form>

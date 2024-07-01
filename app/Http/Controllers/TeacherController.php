@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Teacher;
 use App\Traits\UploadFile;
 
+
 class TeacherController extends Controller
 {
     use UploadFile;
@@ -25,7 +26,7 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $teachers =Teacher::get();
+        $teachers = Teacher::get();
         return view('admin/teachers', compact('teachers'));    }
 
     /**
@@ -33,9 +34,7 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        //
         return view('admin/addTeacher');
-
     }
 
     /**
@@ -153,8 +152,8 @@ class TeacherController extends Controller
     public function errMsgs()
     {
        return [
-            'teacherName.required' => 'برجاء ادخال الاسم',
-            'phone.required' => ' برجاء ادخال رقم تليفون صحيح ' ,
+            'teacherName.required' => 'please enter full name',
+            'phone.required' => 'please enter phone number' ,
         ];
     }
 }
