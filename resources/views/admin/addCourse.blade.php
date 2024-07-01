@@ -4,14 +4,14 @@
 
     <div class="container">
         <div class="page-inner">
-            <h2>Add Class</h2><br>
+            <h2>Add Course</h2><br>
 
             <div class="row">
                 <div class="col-md-12">
                     <div class="card card-round">
                     <div class="card-header">
                         <div class="card-head-row card-tools-still-right">
-                        <h4 class="card-title"> Add New Class</h4>
+                        <h4 class="card-title"> Add New Course</h4>
                         <div class="card-tools">
                             <button class="btn btn-icon btn-link btn-primary btn-xs" >
                             <span class="fa fa-angle-down"></span> </button>
@@ -25,7 +25,7 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                        <form action="{{ route('ClassInserted') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('CourseInserted') }}" method="POST" enctype="multipart/form-data">
                             @csrf
 
                             <div class="row g-3">
@@ -46,7 +46,7 @@
 
                                 <div class="col-12">
                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" value="{{ old('teacherName') }}">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" value="{{ old('teacherName') }}" name="teacherName">
                                         <label for="teacherName">Teacher Name</label>
                                         @error('teacherName')
                                             {{$message}}
@@ -55,29 +55,29 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="price" name="price" placeholder="Class Price" value="{{ old('price') }}">
-                                        <label for="price">Class Price</label>
+                                        <input type="text" class="form-control" id="price" name="price" placeholder="Course Price" value="{{ old('price') }}">
+                                        <label for="price">Course Price</label>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="age" name="age" placeholder="Class age" value="{{ old('age') }}">
-                                        <label for="age">Class age</label>
+                                        <input type="text" class="form-control" id="age" name="age" placeholder="Course age" value="{{ old('age') }}">
+                                        <label for="age">Course age</label>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                    <input type="text" class="form-control" id="time" name="time" placeholder="Class Time" value="{{ old('time') }}">
-                                    <label for="time">Class Time</label>
+                                    <input type="text" class="form-control" id="time" name="time" placeholder="Course Time" value="{{ old('time') }}">
+                                    <label for="time">Course Time</label>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                    <input type="text" class="form-control" id="capacity" name="capacity" placeholder="Class Capacity" value="{{ old('capacity') }}">
-                                    <label for="capacity">Class Capacity</label>
+                                    <input type="text" class="form-control" id="capacity" name="capacity" placeholder="Course Capacity" value="{{ old('capacity') }}">
+                                    <label for="capacity">Course Capacity</label>
                                     </div>
                                 </div>
 

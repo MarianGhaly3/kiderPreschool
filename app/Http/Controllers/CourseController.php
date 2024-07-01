@@ -3,27 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Classs;
+use App\Models\Course;
 
 
-class ClassController extends Controller
+class CourseController extends Controller
 {
 
     private $columns = [
         'subject',
         'teacherName',
-        'Price',
-        'Age',
-        'Time',
-        'Capacity',
+        'price',
+        'age',
+        'time',
+        'capacity',
     ];
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $classses = Classs::get();
-        return view('admin/classes', compact('classses'));
+        $classses = Course::get();
+        return view('admin/courses', compact('courses'));
     }
 
     /**
@@ -31,7 +31,7 @@ class ClassController extends Controller
      */
     public function create()
     {
-        return view('admin/addClass');
+        return view('admin/addCourse');
     }
 
     /**
@@ -42,18 +42,18 @@ class ClassController extends Controller
         $data = $request->validate([
             'subject' => 'required',
             'teacherName' => 'required|max:100|min:5',
-            'Price' => 'required|min:11',
-            'Age' => 'required',
-            'Time' => 'required',
-            'Capacity' => 'required',
+            'price' => 'required|min:11',
+            'age' => 'required',
+            'time' => 'required',
+            'capacity' => 'required',
             //'image' => 'required|image',
         ]);
         
         // $fileName = $this->upload($request->image, 'assets/admin/img');
         // $data['image'] = $fileName;
 
-        Classs::create($data);
-        return redirect ('admin/classes');
+        Course::create($data);
+        return redirect ('admin/courses');
     }
 
     /**
@@ -61,8 +61,8 @@ class ClassController extends Controller
      */
     public function show(string $id)
     {
-        $classs = Classs::findOrFail($id);
-        return view('admin/showClass', compact('classs'));    
+        $course = Course::findOrFail($id);
+        return view('admin/showClass', compact('course'));    
     }
 
     /**
@@ -70,8 +70,8 @@ class ClassController extends Controller
      */
     public function edit(string $id)
     {
-        $classs = Classs::findOrFail($id);
-        return view('admin/editClass', compact('classs'));    
+        $course = Course::findOrFail($id);
+        return view('admin/editCourse', compact('course'));    
     }
 
     /**
@@ -84,12 +84,12 @@ class ClassController extends Controller
         $data = $request->validate([
             'subject' => 'required',
             'teacherName' => 'required|max:100|min:5',
-            'Price' => 'required|min:11',
-            'Age' => 'required',
-            'Time' => 'required',
-            'Capacity' => 'required',
+            'price' => 'required|min:11',
+            'age' => 'required',
+            'time' => 'required',
+            'capacity' => 'required',
         ]);
-        Classs::where('id', $id)->update($data);
+        Course::where('id', $id)->update($data);
         //Client::where('id', $id)->update($request->only($this-> columns ));
         return redirect('admin/classes');
 
@@ -101,12 +101,12 @@ class ClassController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->id;
-        Classs::where('id', $id)->delete();
+        Course::where('id', $id)->delete();
         return redirect('admin/classes');    }
 
     public function trash()
     {
-        $trashed = Classs::onlyTrashed()->get();
+        $trashed = Course::onlyTrashed()->get();
         return view('admin/trashClass', compact('trashed'));
     }
 
@@ -115,7 +115,7 @@ class ClassController extends Controller
      */
     public function restore(string $id)
     {
-        Classs::where('id', $id)->restore();
+        Course::where('id', $id)->restore();
         return redirect('admin/classes');
     }
 
@@ -125,7 +125,7 @@ class ClassController extends Controller
     public function forceDelete(Request $request)
     {
         $id = $request->id;
-        Classs::where('id', $id)->forceDelete();
+        Course::where('id', $id)->forceDelete();
         return redirect('admin/trashClass');
     }
 }

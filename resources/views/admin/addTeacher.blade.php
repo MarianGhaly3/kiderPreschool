@@ -31,7 +31,7 @@
                             <div class="row g-3">
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" value="{{ old('teacherName') }}">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" value="{{ old('teacherName') }}" name="teacherName">
                                         <label for="name">Teacher Name</label>
                                         @error('teacherName')
                                             {{$message}}
@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" value="{{ old('email') }}">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" value="{{ old('email') }}" name="email">
                                         <label for="email">Teacher Email</label>
                                     </div>
                                 </div>
@@ -55,7 +55,7 @@
                                 <div class="col-12">
                                     <div style="background:white; padding: 15px; border-radius: 10px;">
                                         <p>Please select Teacher Subject:</p>
-                                        <select class="form-control" type="text" id="city" name="city">
+                                        <select class="form-control" type="text" id="subject" name="subject">
                                         <option value="">Please Select Subject:</option>
                                         <option value="Art" {{ old('subject') == 'Art' ? 'selected': ''}} >Art & Drawing</option>
                                         <option value="Management" {{ old('subject') == 'Management' ? 'selected': ''}} >Color Management</option>
@@ -80,15 +80,13 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="url" class="form-control" id="twitter" name="twitter"
-                                            placeholder="Teacher Twitter" value="{{ old('twitter') }}">
+                                        <input type="url" class="form-control" id="twitter" name="twitter" placeholder="Teacher Twitter" value="{{ old('twitter') }}">
                                         <label for="twitter">Teacher Twitter</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="url" class="form-control" id="instagram" name="instagram"
-                                            placeholder="Teacher Instagram" value="{{ old('instagram') }}">
+                                        <input type="url" class="form-control" id="instagram" name="instagram" placeholder="Teacher Instagram" value="{{ old('instagram') }}">
                                         <label for="instagram">Teacher Instagram</label>
                                     </div>
                                 </div>

@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
-class Classs extends Model
+class Course extends Model
 {
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'subject',
         'teacherName',
-        'Price',
-        'Age',
-        'Time',
-        'Capacity',
+        'price',
+        'age',
+        'time',
+        'capacity',
     ];
 }

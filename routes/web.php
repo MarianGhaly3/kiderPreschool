@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\kiderController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TeacherController;
-use App\Http\Controllers\ClassController;
+use App\Http\Controllers\CourseController;
 
 
 
@@ -39,18 +39,18 @@ Route::delete('/admin/forceDeleteTeacher', [TeacherController::class, 'forceDele
 Route::post('TeacherInserted', [TeacherController::class, 'store'])->name('TeacherInserted');
 
 
-// Class Controller
-Route::get('/admin/classes', [ClassController::class, 'index'])->name('classes');
-Route::get('/admin/addclass', [ClassController::class, 'create'])->name('addClass');
-Route::get('/admin/editClass/{id}', [ClassController::class, 'edit'])->name('editClass');
-Route::put('/admin/updateClass/{id}', [ClassController::class, 'update'])->name('updateClass');
-Route::get('/admin/showClass/{id}', [ClassController::class, 'show'])->name('showClass');
-Route::delete('/admin/deleteClass', [ClassController::class, 'destroy'])->name('deleteClass');
-Route::get('/admin/trashClass', [ClassController::class, 'trash'])->name('trashClass');
-Route::get('/admin/restoreClass/{id}', [ClassController::class, 'restore'])->name('restoreClass');
-Route::delete('/admin/forceDeleteClass', [ClassController::class, 'forceDelete'])->name('forceDeleteClass');
+// Course Controller
+Route::get('/admin/courses', [CourseController::class, 'index'])->name('courses');
+Route::get('/admin/addCourse', [CourseController::class, 'create'])->name('addCourse');
+Route::get('/admin/editCourse/{id}', [CourseController::class, 'edit'])->name('editCourse');
+Route::put('/admin/updateCourse/{id}', [CourseController::class, 'update'])->name('updateCourse');
+Route::get('/admin/showCourse/{id}', [CourseController::class, 'show'])->name('showCourse');
+Route::delete('/admin/deleteCourse', [CourseController::class, 'destroy'])->name('deleteCourse');
+Route::get('/admin/trashCourse', [CourseController::class, 'trash'])->name('trashCourse');
+Route::get('/admin/restoreCourse/{id}', [CourseController::class, 'restore'])->name('restoreCourse');
+Route::delete('/admin/forceDeleteCourse', [CourseController::class, 'forceDelete'])->name('forceDeleteCourse');
 
-Route::post('ClassInserted', [ClassController::class, 'store'])->name('ClassInserted');
+Route::post('CourseInserted', [CourseController::class, 'store'])->name('CourseInserted');
 
 
 

@@ -17,8 +17,8 @@ class Teacher extends Model
         'phone',
         'email',
         'facebook',
-        'Twitter',
-        'Instagram',
+        'twitter',
+        'instagram',
         'image',
     ];
 
